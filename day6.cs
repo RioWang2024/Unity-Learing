@@ -173,4 +173,69 @@ public class day6 : MonoBehaviour
     object o1 = 1;
     object o2 = new float[2];
     object o3 = true;
+
+    //双色球
+    //买家购买数字数组名NumberOfBuy
+    static Random random = new Random();
+    private static void TwoToneBall()
+    {
+        int RedBallsNumer = new int[6];
+
+        //生成红球
+        for (int i = 0; i < 6;)
+        {
+            int numberRedOfBall = random.Next(1, 34);
+            if (Array.IndexOf(c, RedBallsNumer) == -1)
+            {
+                RedBallsNumer[i++] = numberRedOfBall;
+            }
+        }
+        Array.Sort(RedBallsNumer, 0, 6);//数组名字，起始位置，最终位置
+
+        //买红球
+        Console.WriteLine("请输入1~33之间的数字");
+        int RedBallsNumberOfBuy = new int[6];
+        for (int i = 0; i < 6;)
+        {
+            int numberOfBuy = Console.ReadLineLine();
+            Console.WriteLine("请输入第{0}个红球号码", i);
+            if (numberOfBuy < 34 && numberOfBuy > 0 && Array.IndexOf(numberOfBuy, NumberOfBuy) == -1)
+            {
+                //当数组索引确定有对应对象时返回对象所在位置，如58000中寻找8，输出1，当没有对象时返回-1
+                RedBallsNumberOfBuy[i++] = numberOfBuy;
+            }
+            else
+            {
+                Console.WriteLine("输入有误");
+            }
+        }
+
+        int numberBlueOfBall = random.Next(1, 16);
+        //买蓝球
+        Console.WriteLine("请输入1~16之间的数字");
+        int i = Console.ReadLineLine();
+        if (NumberBlueOfBuy >= 1 && NumberBlueOfBuy <= 16)
+        {
+            int NumberBlueOfBuy = i;
+        }
+        else
+        {
+            Console.WriteLine("输入有误");
+        }
+        bool checkBlueBall = CheckBlue(numberBlueOfBall == NumberBlueOfBuy);
+
+        //有没有中奖
+        foreach (var item in RedBallsNumberOfBuy)
+        {
+            bool CheckRed = new bool[6];
+            int Checknumber = 0;
+            for (i = 0; i < 6; i++)
+            {
+                if (Array.IndexOf(RedBallsNumer, number) >= 0)
+                    Checknumber++;
+            }
+        }
+        
+        //生成结果输出不想写了，略！
+    }
 }
