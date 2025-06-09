@@ -223,8 +223,9 @@ public class day6 : MonoBehaviour
             Console.WriteLine("输入有误");
         }
         bool checkBlueBall = CheckBlue(numberBlueOfBall == NumberBlueOfBuy);
+        //老师示例：int blueCount = myTicket[6] == randomTicket[6]?1:0;
 
-        //有没有中奖
+        //红球有没有中奖
         foreach (var item in RedBallsNumberOfBuy)
         {
             bool CheckRed = new bool[6];
@@ -235,7 +236,30 @@ public class day6 : MonoBehaviour
                     Checknumber++;
             }
         }
-        
+        //老师示例（老师的购买数字正在同一组数组）：
+        //for(int i = 0;i<6;i++)
+        //if(Array.IndexOf(randomTicket,myTicket[0],0,6)>=0)
+        //redCount++;
+
         //生成结果输出不想写了，略！
+        /*
+        老师示例：
+        int Redlevel;
+        if (blueCount + redCount == 7)
+            level = 1;
+        else if (redCount == 6)
+            level = 2;
+        else if (blueCount + redCount == 6)
+            level = 3;
+        else if (blueCount + redCount == 5)
+            level = 4;
+        else if (blueCount + redCount == 4)
+            level = 5;
+        else if (buleCount == 1)
+            level = 6;
+        else
+            level = 0;
+        return level;
+        */
     }
 }
