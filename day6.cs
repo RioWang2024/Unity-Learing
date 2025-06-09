@@ -198,7 +198,7 @@ public class day6 : MonoBehaviour
         for (int i = 0; i < 6;)
         {
             int numberOfBuy = Console.ReadLineLine();
-            Console.WriteLine("请输入第{0}个红球号码", i);
+            Console.WriteLine("请输入第{0}个红球号码", i+1);
             if (numberOfBuy < 34 && numberOfBuy > 0 && Array.IndexOf(numberOfBuy, NumberOfBuy) == -1)
             {
                 //当数组索引确定有对应对象时返回对象所在位置，如58000中寻找8，输出1，当没有对象时返回-1
